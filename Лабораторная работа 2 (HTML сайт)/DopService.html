@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+
+		<title>Affiliate Services</title>
+    </head>
+
+    <body background="fon.jpg">
+        <h1 align="center">Air Company</h1>
+
+        <p>
+            <ul type="none" align="center">
+                <li><a href="Rules.html">Правила безопасности</a></li>
+                <li><a href="main.html">Главная</a></li>
+                <li><a href="Events.html">Мероприятия</a></li>
+            </ul>
+        </p>
+
+        <hr width="80%" align="center" color="gray" size="3">
+        <hr width="80%" align="center" color="gray" size="3">
+
+        <details align="left">
+            <summary> Навигация </summary>
+                <ul type="circle">
+                    <li><a href="#broni">Бронирование отеля</a></li>
+                    <li><a href="#act">Туры/Активности</a></li>
+                </ul>
+        </details>
+
+        <h1 align="center"><a name="broni">Бронирование отеля</a></h1>
+        
+        <form>
+            <fieldset>
+                <legend><big>Построить график по показателям</big></legend>
+                    <p>
+                        <b>По горизонтали:</b><br>
+                        <input type="radio" name="horizontal" value="hotel">Название отеля<br>
+                        <input type="radio" name="horizontal" value="link">Сайт
+                    </p>
+
+                    <p>
+                        <b>По вертикали:</b><br>
+                        <input type="radio" name="vertical" value="city">Город<br>
+                        <input type="radio" name="vertical" value="rau">Рейтинг<br>
+                        <input type="radio" name="vertical" value="price">Цена за ночь<br>
+                    </p>
+
+                    <input type="button" value="Построить">
+            </fieldset>
+        </form>
+
+        <p></p>
+
+         <form>
+            <fieldset>
+                <legend><big>Сортировать по показателю:</big></legend>
+                    <select name="pole">
+                        <option value="0">Город А-Я</option>
+                        <option value="1">Рейтинг от меньшего к большему</option>
+                        <option value="2">Рейтинг от большего к меньшему</option>
+                        <option value="3">Цена от меньшего к большему</option>
+                        <option value="4">Цена от большего к меньшему</option>
+                    </select>
+                    <input type="button" value="Сортировать">
+            </fieldset>
+        </form>
+
+        <p></p>
+
+        <form>
+            <fieldset>
+                <legend><big>Фильтровать:</big></legend>
+                <p>
+                    <label>Название отеля:
+                        <input type="text" name="Honame" id="Honame">
+                    </label>
+                </p>
+
+                <p>
+                    <label>Город:
+                        <input type="text" name="Ciname" id="Ciname">
+                    </label>
+                </p>
+
+                <p>
+                    <label>Сайт:
+                        <input type="text" name="Linkname" id="Linkname">
+                    </label>
+                </p>
+
+                <p>
+                    <label>Рейтинг:
+                        от
+                        <input type="number" min="0" max="5.0">
+                        до
+                        <input type="number" min="0" max="5.0">
+                    </label>
+                </p>
+
+                <p>
+                    <label>Цена за ночь:
+                        от
+                        <input type="number" min="0" max="100000000000">
+                        до
+                        <input type="number" min="0" max="100000000000">
+                    </label>
+                </p>
+
+                <input type="button" value="Фильтровать">
+            </fieldset>
+        </form>
+
+        <p></p>
+
+        <table border="2" align="center" cellpadding="5px">
+            <tr>
+                <th>№</th>
+                <th>Название отеля</th>
+                <th>Город</th>
+                <th>Сайт</th>
+                <th>Рейтинг</th>
+                <th>Цена за ночь</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Golden Palace Hotel</td>
+                <td>Лондон</td>
+                <td>www.goldenpalacehotel.com</td>
+                <td>4.5</td>
+                <td>20000</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Sunset Beach Resort</td>
+                <td>Майами</td>
+                <td>www.sunsetbeachresort.com</td>
+                <td>4.0</td>
+                <td>15000</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Grand Continental Hotel</td>
+                <td>Париж</td>
+                <td>www.grandcontinentalhotel.com</td>
+                <td>4.7</td>
+                <td>25000</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Sunset</td>
+                <td>Майами</td>
+                <td>www.sunset.com</td>
+                <td>4.1</td>
+                <td>10000</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Resort</td>
+                <td>Майами</td>
+                <td>www.resort.com</td>
+                <td>4.3</td>
+                <td>12000</td>
+            </tr>
+
+            <tr>
+                <td>6</td>
+                <td>Golden Palace Hotel</td>
+                <td>Лондон</td>
+                <td>www.goldenpalacehotel.com</td>
+                <td>4.5</td>
+                <td>20000</td>
+            </tr>
+
+            <tr>
+                <td>7</td>
+                <td>Sunset Beach Resort</td>
+                <td>Майами</td>
+                <td>www.sunsetbeachresort.com</td>
+                <td>4.0</td>
+                <td>15000</td>
+            </tr>
+
+            <tr>
+                <td>8</td>
+                <td>Grand Continental Hotel</td>
+                <td>Париж</td>
+                <td>www.grandcontinentalhotel.com</td>
+                <td>4.7</td>
+                <td>25000</td>
+            </tr>
+
+            <tr>
+                <td>9</td>
+                <td>Sunset</td>
+                <td>Майами</td>
+                <td>www.sunset.com</td>
+                <td>4.1</td>
+                <td>10000</td>
+            </tr>
+
+            <tr>
+                <td>10</td>
+                <td>Resort</td>
+                <td>Майами</td>
+                <td>www.resort.com</td>
+                <td>4.3</td>
+                <td>12000</td>
+            </tr>
+
+            <tr>
+                <td>11</td>
+                <td>Лунная радуга</td>
+                <td>Лондон</td>
+                <td>www.luna.com</td>
+                <td>4.5</td>
+                <td>20000</td>
+            </tr>
+
+            <tr>
+                <td>12</td>
+                <td>Звездный ветер</td>
+                <td>Лондон</td>
+                <td>www.star.com</td>
+                <td>4.0</td>
+                <td>15000</td>
+            </tr>
+
+            <tr>
+                <td>13</td>
+                <td>Солнечный бриз</td>
+                <td>Париж</td>
+                <td>www.sun.com</td>
+                <td>4.7</td>
+                <td>25000</td>
+            </tr>
+
+            <tr>
+                <td>14</td>
+                <td>Морской орел</td>
+                <td>Майами</td>
+                <td>www.bur.com</td>
+                <td>4.1</td>
+                <td>10000</td>
+            </tr>
+
+            <tr>
+                <td>15</td>
+                <td>Горный котел</td>
+                <td>Кейптаун</td>
+                <td>www.resort.com</td>
+                <td>4.7</td>
+                <td>12000</td>
+            </tr>
+
+            <tr>
+                <td>16</td>
+                <td>Долина мечты</td>
+                <td>Венеция</td>
+                <td>www.golden.com</td>
+                <td>4.1</td>
+                <td>20000</td>
+            </tr>
+
+            <tr>
+                <td>17</td>
+                <td>Веселый пингвин</td>
+                <td>Майами</td>
+                <td>www.su.com</td>
+                <td>3.2</td>
+                <td>8000</td>
+            </tr>
+
+            <tr>
+                <td>18</td>
+                <td>Золотая рыбка</td>
+                <td>Кейптаун</td>
+                <td>www.fish.com</td>
+                <td>4.3</td>
+                <td>25000</td>
+            </tr>
+
+            <tr>
+                <td>19</td>
+                <td>Космическая пыль</td>
+                <td>Майами</td>
+                <td>www.cosmos.com</td>
+                <td>3.1</td>
+                <td>1000</td>
+            </tr>
+
+            <tr>
+                <td>20</td>
+                <td>Радужный ковер</td>
+                <td>Кельн</td>
+                <td>www.raduga.com</td>
+                <td>4.9</td>
+                <td>10000</td>
+            </tr>
+
+            <tr>
+                <td>21</td>
+                <td>Огненный жемчуг</td>
+                <td>Венеция</td>
+                <td>www.fire.com</td>
+                <td>5.0</td>
+                <td>32000</td>
+            </tr>
+
+            <tr>
+                <td>22</td>
+                <td>Волшебная гавань</td>
+                <td>Майами</td>
+                <td>www.magic.com</td>
+                <td>4.0</td>
+                <td>11000</td>
+            </tr>
+
+            <tr>
+                <td>23</td>
+                <td>Цветущий сад</td>
+                <td>Монако</td>
+                <td>www.garden.com</td>
+                <td>4.7</td>
+                <td>32000</td>
+            </tr>
+
+            <tr>
+                <td>24</td>
+                <td>Дремучий лес</td>
+                <td>Майами</td>
+                <td>www.forest.com</td>
+                <td>3.2</td>
+                <td>10000</td>
+            </tr>
+
+            <tr>
+                <td>25</td>
+                <td>Кристальный лед</td>
+                <td>Венеция</td>
+                <td>www.lyod.com</td>
+                <td>5</td>
+                <td>12000</td>
+            </tr>
+
+            <tr>
+                <td>26</td>
+                <td>Мерцающий луч</td>
+                <td>Кейптаун</td>
+                <td>www.blick.com</td>
+                <td>4.5</td>
+                <td>20000</td>
+            </tr>
+
+            <tr>
+                <td>27</td>
+                <td>Пляжный рай</td>
+                <td>Монако</td>
+                <td>www.plyah.com</td>
+                <td>4.0</td>
+                <td>150000</td>
+            </tr>
+
+            <tr>
+                <td>28</td>
+                <td>Утренняя звезда</td>
+                <td>Окленд</td>
+                <td>www.monningstar.com</td>
+                <td>2.4</td>
+                <td>7000</td>
+            </tr>
+
+            <tr>
+                <td>29</td>
+                <td>Фантастический океан</td>
+                <td>Лиссабон</td>
+                <td>www.fantasticocean.com</td>
+                <td>4.8</td>
+                <td>14000</td>
+            </tr>
+
+            <tr>
+                <td>30</td>
+                <td>Ледяной замок</td>
+                <td>Лиссабон</td>
+                <td>www.cathle.com</td>
+                <td>4.9</td>
+                <td>120000</td>
+            </tr>
+
+            <tr>
+                <td>31</td>
+                <td>Дикий ветреный</td>
+                <td>Лондон</td>
+                <td>www.danger.com</td>
+                <td>2.2</td>
+                <td>20000</td>
+            </tr>
+
+            <tr>
+                <td>32</td>
+                <td>Пляжная радуга</td>
+                <td>Окленд</td>
+                <td>www.rawberry.com</td>
+                <td>4.6</td>
+                <td>15000</td>
+            </tr>
+
+            <tr>
+                <td>33</td>
+                <td>Солнечный остров</td>
+                <td>Венеция</td>
+                <td>www.island.com</td>
+                <td>3.8</td>
+                <td>25000</td>
+            </tr>
+
+            <tr>
+                <td>34</td>
+                <td>Снежный холм</td>
+                <td>Кейрен</td>
+                <td>www.holm.com</td>
+                <td>4.1</td>
+                <td>10000</td>
+            </tr>
+
+            <tr>
+                <td>35</td>
+                <td>Воздушный замок</td>
+                <td>Истанбул</td>
+                <td>www.vozduh.com</td>
+                <td>4.3</td>
+                <td>12000</td>
+            </tr>
+
+            <tr>
+                <td>36</td>
+                <td>Пыльная пустыня</td>
+                <td>Лондон</td>
+                <td>www.pystina.com</td>
+                <td>4.5</td>
+                <td>20700</td>
+            </tr>
+
+            <tr>
+                <td>37</td>
+                <td>Звездопад</td>
+                <td>Прага</td>
+                <td>www.starspad.com</td>
+                <td>4.0</td>
+                <td>15300</td>
+            </tr>
+
+            <tr>
+                <td>38</td>
+                <td>Сумеречный залив</td>
+                <td>Париж</td>
+                <td>www.sumerki.com</td>
+                <td>4.7</td>
+                <td>25000</td>
+            </tr>
+
+            <tr>
+                <td>39</td>
+                <td>Медовые водопады</td>
+                <td>Эдинбург</td>
+                <td>www.honey.com</td>
+                <td>4.1</td>
+                <td>10200</td>
+            </tr>
+
+            <tr>
+                <td>40</td>
+                <td>Аметистовый камень</td>
+                <td>Майами</td>
+                <td>www.ametist.com</td>
+                <td>5</td>
+                <td>19000</td>
+            </tr>
+
+            <tr>
+                <td>41</td>
+                <td>Пляжный бриз</td>
+                <td>Венеция</td>
+                <td>www.briz.com</td>
+                <td>4.5</td>
+                <td>21000</td>
+            </tr>
+
+            <tr>
+                <td>42</td>
+                <td>Космический шторм</td>
+                <td>Окленд</td>
+                <td>www.cosmicbah.com</td>
+                <td>4.0</td>
+                <td>15800</td>
+            </tr>
+
+            <tr>
+                <td>43</td>
+                <td>Зимний сон</td>
+                <td>Осака</td>
+                <td>www.winter.com</td>
+                <td>4.9</td>
+                <td>255000</td>
+            </tr>
+
+            <tr>
+                <td>44</td>
+                <td>Магический орех</td>
+                <td>Осака</td>
+                <td>www.oreh.com</td>
+                <td>2.3</td>
+                <td>100000</td>
+            </tr>
+
+            <tr>
+                <td>45</td>
+                <td>Небесный аромат</td>
+                <td>Венеция</td>
+                <td>www.sky.com</td>
+                <td>3.2</td>
+                <td>500</td>
+            </tr>
+
+            <tr>
+                <td>46</td>
+                <td>Разбитый фонарь</td>
+                <td>Сеул</td>
+                <td>www.green.com</td>
+                <td>5.0</td>
+                <td>20000</td>
+            </tr>
+
+            <tr>
+                <td>47</td>
+                <td>Веселая рыбка</td>
+                <td>Лондон</td>
+                <td>www.funnyfish.com</td>
+                <td>4.0</td>
+                <td>15000</td>
+            </tr>
+
+            <tr>
+                <td>48</td>
+                <td>Розовый сумрак</td>
+                <td>Кельн</td>
+                <td>www.purple.com</td>
+                <td>3.2</td>
+                <td>25100</td>
+            </tr>
+
+            <tr>
+                <td>49</td>
+                <td>Серебряная стрела</td>
+                <td>Монако</td>
+                <td>www.serebro.com</td>
+                <td>4.1</td>
+                <td>10000</td>
+            </tr>
+
+            <tr>
+                <td>50</td>
+                <td>Искристый вихрь</td>
+                <td>Кейптаун</td>
+                <td>www.vihr.com</td>
+                <td>4.0</td>
+                <td>12000</td>
+            </tr>
+        </table>
+
+        <h1 align="center"><a name="act">Туры/Активности</a></h1>
+
+        <p align="center">
+            <img src="ski.jpg" width="20%" align="middle" hspace="20">
+            <big>Горнолыжный курорт</big>
+        </p>
+
+        <hr width="100%" size="3" color="gray">
+
+        <details align="center">
+            <summary> Контакты </summary>
+                <ul type="none">
+                    <li>8-800-545-35-35</li>
+                    <li>air.company@gmail.ru</li>
+                    <li>г. Владивосток, ул. Некрасовская, д.50</li>
+                </ul>
+        </details>
+    </body>
+</html>
