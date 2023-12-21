@@ -35,15 +35,17 @@
                 <legend><big>Построить график по показателям</big></legend>
                     <p>
                         <b>По горизонтали:</b><br>
-                        <input type="radio" name="horizontal" value="hotel">Название отеля<br>
-                        <input type="radio" name="horizontal" value="link">Сайт
+                        <input type="radio" name="horizontal" value="city">Город<br>
+                        <input type="radio" name="horizontal" value="price">Тип отеля<br>
                     </p>
 
                     <p>
                         <b>По вертикали:</b><br>
-                        <input type="radio" name="vertical" value="city">Город<br>
-                        <input type="radio" name="vertical" value="rau">Рейтинг<br>
-                        <input type="radio" name="vertical" value="price">Цена за ночь<br>
+                        <input type="radio" name="vertical" value="KHotel">Количество отелей<br>
+                        <input type="radio" name="vertical" value="Maxrau">Максимальный рейтинг<br>
+                        <input type="radio" name="vertical" value="Minrau">Минимальный рейтинг<br>
+                        <input type="radio" name="vertical" value="Maxprice">Максимальная цена за ночь<br>
+                        <input type="radio" name="vertical" value="Minprice">Минимальная цена за ночь<br>
                     </p>
 
                     <input type="button" value="Построить">
@@ -54,15 +56,41 @@
 
          <form>
             <fieldset>
-                <legend><big>Сортировать по показателю:</big></legend>
+                <legend><big>Сортировать по показателям:</big></legend>
+                <label> Первый уровень:
                     <select name="pole">
+                        <option value="5" seslected>Нет</option>
                         <option value="0">Город А-Я</option>
                         <option value="1">Рейтинг от меньшего к большему</option>
                         <option value="2">Рейтинг от большего к меньшему</option>
                         <option value="3">Цена от меньшего к большему</option>
                         <option value="4">Цена от большего к меньшему</option>
                     </select>
-                    <input type="button" value="Сортировать">
+                </label><br>
+
+                <label> Второй уровень:
+                    <select name="pole">
+                        <option value="5" seslected>Нет</option>
+                        <option value="0">Город А-Я</option>
+                        <option value="1">Рейтинг от меньшего к большему</option>
+                        <option value="2">Рейтинг от большего к меньшему</option>
+                        <option value="3">Цена от меньшего к большему</option>
+                        <option value="4">Цена от большего к меньшему</option>
+                    </select>
+                </label><br>
+
+                <label> Третий уровень:
+                    <select name="pole">
+                        <option value="5" seslected>Нет</option>
+                        <option value="0">Город А-Я</option>
+                        <option value="1">Рейтинг от меньшего к большему</option>
+                        <option value="2">Рейтинг от большего к меньшему</option>
+                        <option value="3">Цена от меньшего к большему</option>
+                        <option value="4">Цена от большего к меньшему</option>
+                    </select>
+                </label><br>
+
+                <input type="button" value="Сортировать">
             </fieldset>
         </form>
 
@@ -107,6 +135,12 @@
                     </label>
                 </p>
 
+                <p>
+                    <label>Тип отеля:
+                        <input type="text" name="type" id="type">
+                    </label>
+                </p>
+
                 <input type="button" value="Фильтровать">
             </fieldset>
         </form>
@@ -121,6 +155,7 @@
                 <th>Сайт</th>
                 <th>Рейтинг</th>
                 <th>Цена за ночь</th>
+                <th>Тип отеля</th>
             </tr>
 
             <tr>
@@ -130,6 +165,7 @@
                 <td>www.goldenpalacehotel.com</td>
                 <td>4.5</td>
                 <td>20000</td>
+                <td>Гостиницы среднего класса</td>
             </tr>
 
             <tr>
@@ -139,6 +175,7 @@
                 <td>www.sunsetbeachresort.com</td>
                 <td>4.0</td>
                 <td>15000</td>
+                <td>Частные гостиницы</td>
             </tr>
 
             <tr>
@@ -148,6 +185,7 @@
                 <td>www.grandcontinentalhotel.com</td>
                 <td>4.7</td>
                 <td>25000</td>
+                <td>Гостиницы среднего класса</td>
             </tr>
 
             <tr>
@@ -157,6 +195,7 @@
                 <td>www.sunset.com</td>
                 <td>4.1</td>
                 <td>10000</td>
+                <td>Гостиницы среднего класса</td>
             </tr>
 
             <tr>
@@ -166,6 +205,7 @@
                 <td>www.resort.com</td>
                 <td>4.3</td>
                 <td>12000</td>
+                <td>Частные гостиницы</td>
             </tr>
 
             <tr>
@@ -175,6 +215,7 @@
                 <td>www.goldenpalacehotel.com</td>
                 <td>4.5</td>
                 <td>20000</td>
+                <td>Мотели</td>
             </tr>
 
             <tr>
@@ -184,6 +225,7 @@
                 <td>www.sunsetbeachresort.com</td>
                 <td>4.0</td>
                 <td>15000</td>
+                <td>Гостиницы среднего класса</td>
             </tr>
 
             <tr>
@@ -193,6 +235,7 @@
                 <td>www.grandcontinentalhotel.com</td>
                 <td>4.7</td>
                 <td>25000</td>
+                <td>Мотели</td>
             </tr>
 
             <tr>
@@ -202,6 +245,7 @@
                 <td>www.sunset.com</td>
                 <td>4.1</td>
                 <td>10000</td>
+                <td>Гостиницы среднего класса</td>
             </tr>
 
             <tr>
@@ -211,6 +255,7 @@
                 <td>www.resort.com</td>
                 <td>4.3</td>
                 <td>12000</td>
+                <td>Частные гостиницы</td>
             </tr>
 
             <tr>
@@ -220,6 +265,7 @@
                 <td>www.luna.com</td>
                 <td>4.5</td>
                 <td>20000</td>
+                <td>Мотели</td>
             </tr>
 
             <tr>
@@ -229,6 +275,7 @@
                 <td>www.star.com</td>
                 <td>4.0</td>
                 <td>15000</td>
+                <td>Частные гостиницы</td>
             </tr>
 
             <tr>
@@ -238,6 +285,7 @@
                 <td>www.sun.com</td>
                 <td>4.7</td>
                 <td>25000</td>
+                <td>Мотели</td>
             </tr>
 
             <tr>
@@ -247,6 +295,7 @@
                 <td>www.bur.com</td>
                 <td>4.1</td>
                 <td>10000</td>
+                <td>Гостиницы-апартамент</td>
             </tr>
 
             <tr>
@@ -256,6 +305,7 @@
                 <td>www.resort.com</td>
                 <td>4.7</td>
                 <td>12000</td>
+                <td>Частные гостиницы</td>
             </tr>
 
             <tr>
@@ -265,6 +315,7 @@
                 <td>www.golden.com</td>
                 <td>4.1</td>
                 <td>20000</td>
+                <td>Гостиницы-апартамент</td>
             </tr>
 
             <tr>
@@ -274,6 +325,7 @@
                 <td>www.su.com</td>
                 <td>3.2</td>
                 <td>8000</td>
+                <td>Гостиницы среднего класса</td>
             </tr>
 
             <tr>
@@ -283,6 +335,7 @@
                 <td>www.fish.com</td>
                 <td>4.3</td>
                 <td>25000</td>
+                <td>Гостиницы-апартамент</td>
             </tr>
 
             <tr>
@@ -292,6 +345,7 @@
                 <td>www.cosmos.com</td>
                 <td>3.1</td>
                 <td>1000</td>
+                <td>Мотели</td>
             </tr>
 
             <tr>
@@ -301,6 +355,7 @@
                 <td>www.raduga.com</td>
                 <td>4.9</td>
                 <td>10000</td>
+                <td>Гостиницы-апартамент</td>
             </tr>
 
             <tr>
@@ -310,6 +365,7 @@
                 <td>www.fire.com</td>
                 <td>5.0</td>
                 <td>32000</td>
+                <td>Гостиницы среднего класса</td>
             </tr>
 
             <tr>
@@ -319,6 +375,7 @@
                 <td>www.magic.com</td>
                 <td>4.0</td>
                 <td>11000</td>
+                <td>Курортные гостиницы</td>
             </tr>
 
             <tr>
@@ -328,6 +385,7 @@
                 <td>www.garden.com</td>
                 <td>4.7</td>
                 <td>32000</td>
+                <td>Курортные гостиницы</td>
             </tr>
 
             <tr>
@@ -337,6 +395,7 @@
                 <td>www.forest.com</td>
                 <td>3.2</td>
                 <td>10000</td>
+                <td>Частные гостиницы</td>
             </tr>
 
             <tr>
@@ -346,6 +405,7 @@
                 <td>www.lyod.com</td>
                 <td>5</td>
                 <td>12000</td>
+                <td>Курортные гостиницы</td>
             </tr>
 
             <tr>
@@ -355,6 +415,7 @@
                 <td>www.blick.com</td>
                 <td>4.5</td>
                 <td>20000</td>
+                <td>Гостиницы среднего класса</td>
             </tr>
 
             <tr>
@@ -364,6 +425,7 @@
                 <td>www.plyah.com</td>
                 <td>4.0</td>
                 <td>150000</td>
+                <td>Гостиницы-апартамент</td>
             </tr>
 
             <tr>
@@ -373,6 +435,7 @@
                 <td>www.monningstar.com</td>
                 <td>2.4</td>
                 <td>7000</td>
+                <td>Гостиницы-апартамент</td>
             </tr>
 
             <tr>
@@ -382,6 +445,7 @@
                 <td>www.fantasticocean.com</td>
                 <td>4.8</td>
                 <td>14000</td>
+                <td>Гостиницы среднего класса</td>
             </tr>
 
             <tr>
@@ -391,6 +455,7 @@
                 <td>www.cathle.com</td>
                 <td>4.9</td>
                 <td>120000</td>
+                <td>Частные гостиницы</td>
             </tr>
 
             <tr>
@@ -400,6 +465,7 @@
                 <td>www.danger.com</td>
                 <td>2.2</td>
                 <td>20000</td>
+                <td>Мотели</td>
             </tr>
 
             <tr>
@@ -409,6 +475,7 @@
                 <td>www.rawberry.com</td>
                 <td>4.6</td>
                 <td>15000</td>
+                <td>Гостиницы-апартамент</td>
             </tr>
 
             <tr>
@@ -418,6 +485,7 @@
                 <td>www.island.com</td>
                 <td>3.8</td>
                 <td>25000</td>
+                <td>Курортные гостиницы</td>
             </tr>
 
             <tr>
@@ -427,6 +495,7 @@
                 <td>www.holm.com</td>
                 <td>4.1</td>
                 <td>10000</td>
+                <td>Гостиницы-апартамент</td>
             </tr>
 
             <tr>
@@ -436,6 +505,7 @@
                 <td>www.vozduh.com</td>
                 <td>4.3</td>
                 <td>12000</td>
+                <td>Частные гостиницы</td>
             </tr>
 
             <tr>
@@ -445,6 +515,7 @@
                 <td>www.pystina.com</td>
                 <td>4.5</td>
                 <td>20700</td>
+                <td>Курортные гостиницы</td>
             </tr>
 
             <tr>
@@ -454,6 +525,7 @@
                 <td>www.starspad.com</td>
                 <td>4.0</td>
                 <td>15300</td>
+                <td>Гостиницы-апартамент</td>
             </tr>
 
             <tr>
@@ -463,6 +535,7 @@
                 <td>www.sumerki.com</td>
                 <td>4.7</td>
                 <td>25000</td>
+                <td>Гостиницы среднего класса</td>
             </tr>
 
             <tr>
@@ -472,6 +545,7 @@
                 <td>www.honey.com</td>
                 <td>4.1</td>
                 <td>10200</td>
+                <td>Курортные гостиницы</td>
             </tr>
 
             <tr>
@@ -481,6 +555,7 @@
                 <td>www.ametist.com</td>
                 <td>5</td>
                 <td>19000</td>
+                <td>Частные гостиницы</td>
             </tr>
 
             <tr>
@@ -490,6 +565,7 @@
                 <td>www.briz.com</td>
                 <td>4.5</td>
                 <td>21000</td>
+                <td>Частные гостиницы</td>
             </tr>
 
             <tr>
@@ -499,6 +575,7 @@
                 <td>www.cosmicbah.com</td>
                 <td>4.0</td>
                 <td>15800</td>
+                <td>Гостиницы-апартамент</td>
             </tr>
 
             <tr>
@@ -508,6 +585,7 @@
                 <td>www.winter.com</td>
                 <td>4.9</td>
                 <td>255000</td>
+                <td>Частные гостиницы</td>
             </tr>
 
             <tr>
@@ -517,6 +595,7 @@
                 <td>www.oreh.com</td>
                 <td>2.3</td>
                 <td>100000</td>
+                <td>Частные гостиницы</td>
             </tr>
 
             <tr>
@@ -526,6 +605,7 @@
                 <td>www.sky.com</td>
                 <td>3.2</td>
                 <td>500</td>
+                <td>Гостиницы среднего класса</td>
             </tr>
 
             <tr>
@@ -535,6 +615,7 @@
                 <td>www.green.com</td>
                 <td>5.0</td>
                 <td>20000</td>
+                <td>Частные гостиницы</td>
             </tr>
 
             <tr>
@@ -544,6 +625,7 @@
                 <td>www.funnyfish.com</td>
                 <td>4.0</td>
                 <td>15000</td>
+                <td>Курортные гостиницы</td>
             </tr>
 
             <tr>
@@ -553,6 +635,7 @@
                 <td>www.purple.com</td>
                 <td>3.2</td>
                 <td>25100</td>
+                <td>Курортные гостиницы</td>
             </tr>
 
             <tr>
@@ -562,6 +645,7 @@
                 <td>www.serebro.com</td>
                 <td>4.1</td>
                 <td>10000</td>
+                <td>Курортные гостиницы</td>
             </tr>
 
             <tr>
@@ -571,6 +655,7 @@
                 <td>www.vihr.com</td>
                 <td>4.0</td>
                 <td>12000</td>
+                <td>Гостиницы среднего класса</td>
             </tr>
         </table>
 
