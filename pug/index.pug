@@ -1,0 +1,57 @@
+mixin createMenu(list)
+    div.buttons
+        each item in list
+            a(href="#")=item
+
+- var name = 'Air Company'
+-var menu=['Меню_1', 'Меню_2', 'Меню_3', 'Меню_4']
+
+doctype html
+html(lang="ru")
+	head
+		link(rel="stylesheet" type="text/css" href="ccs.css")
+		meta(charset="utf-8")
+		title #{name}
+	article
+		div.menu
+			h2 Air Company
+			+createMenu(menu)
+		div.content
+			div.content-left
+				div.content-left-block
+					img(src="https://fotovdom.ru/upload/iblock/d71/d71d7bf912c554d306e400ffe43718ac.jpg")
+					h2 Мероприятия
+					span 27.12 Состоится открытие нового рейса.
+				div.content-left-block
+					img(src="https://fotovdom.ru/upload/iblock/d71/d71d7bf912c554d306e400ffe43718ac.jpg")
+					h2 Путешествия
+					span Москва Сургут Москва - популярный маршрут
+				div.content-left-block
+					img(src="https://fotovdom.ru/upload/iblock/d71/d71d7bf912c554d306e400ffe43718ac.jpg")
+					h2 СМИ
+					span Проведение церемонии открытия нового маршрута
+				div.content-left-block
+					img(src="https://fotovdom.ru/upload/iblock/d71/d71d7bf912c554d306e400ffe43718ac.jpg")
+					h2 СМИ
+					span Проведение церемонии открытия нового маршрута
+			div.content-right
+				div.content-right-block
+					img(src="https://fotovdom.ru/upload/iblock/d71/d71d7bf912c554d306e400ffe43718ac.jpg")
+					h2 Мероприятия
+					span 27.12 Состоится открытие нового рейса. 27.12 Состоится открытие нового рейса.
+				div.content-right-block
+					img(src="https://fotovdom.ru/upload/iblock/d71/d71d7bf912c554d306e400ffe43718ac.jpg")
+					h2 Путешествия
+					span Москва Сургут Москва - популярный маршрут Москва Сургут Москва - популярный маршрут
+				div.content-right-block
+					img(src="https://fotovdom.ru/upload/iblock/d71/d71d7bf912c554d306e400ffe43718ac.jpg")
+					h2 СМИ
+					span Проведение церемонии открытия нового маршрута Москва Сургут Москва - популярный маршрут
+				div.content-right-block
+					img(src="https://fotovdom.ru/upload/iblock/d71/d71d7bf912c554d306e400ffe43718ac.jpg")
+					h2 СМИ
+					span Проведение церемонии открытия нового маршрута Москва Сургут Москва - популярный маршрут
+	footer
+		span © Егорова К.С., Б9121-09.03.04/1, 2023-2024
+		span.right ✉ Контакты
+
