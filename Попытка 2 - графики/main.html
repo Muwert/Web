@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+
+		<title>Air Company</title>
+    </head>
+
+    <body background="fon.jpg">
+        <h1 align="center">Air Company</h1>
+
+        <p>
+            <ul type="none" align="center">
+                <li><a href="DopService.html">Дополнительные услуги (Таблица)</a></li>
+            </ul>
+        </p>
+
+        <p align="center">
+            <img src="samolet.jpg" width="100%">
+            <img src="plane.jpg" width="100%">
+        </p>
+
+        <form>
+            <fieldset>
+                <legend><big>Искать билеты:</big></legend>
+                <p>
+                    <label>Откуда:
+                        <input type="text" name="from" id="from">
+                    </label>
+                </p>
+
+                <p>
+                    <label>Куда:
+                        <input type="text" name="to" id="to">
+                    </label>
+                </p>
+
+                <p>
+                    <label>Количество человек:
+                        <input type="number" min="0" max="100000000000">
+                    </label>
+                </p>
+
+                <p>
+                    <label>Дата:
+                        <input type="date" min="2023-12-21" max="2025-12-31">
+                    </label>
+                </p>
+
+                <input type="button" value="Искать">
+            </fieldset>
+        </form>
+
+        <h2 align="center">Новости компании</h2>
+
+        <p align="justify">
+            <img src="Владивосток.png" width="20%" align="right" hspace="20">
+            <b>20.12</b> Air Company открыла продажи субсидированных билетов на направлении Москва — Владивосток — Москва
+        </p>
+        
+        <hr width="100%" size="3" color="gray">
+
+        <details align="center">
+            <summary> Контакты </summary>
+                <ul type="none">
+                    <li>8-800-545-35-35</li>
+                    <li>air.company@gmail.ru</li>
+                    <li>г. Владивосток, ул. Некрасовская, д.50</li>
+                </ul>
+        </details>
+    </body>
+</html>

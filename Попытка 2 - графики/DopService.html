@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Графики</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body background="fon.jpg">
+    <h1 align="center">Air Company</h1>
+
+    <p>
+        <a href="main.html">Главная</a>
+    </p>
+
+    <hr width="80%" align="center" color="gray" size="3">
+    <hr width="80%" align="center" color="gray" size="3">
+
+    <details align="left">
+        <summary> Навигация </summary>
+            <ul type="circle">
+                <li><a href="#broni">Бронирование отеля</a></li>
+                <li><a href="#act">Туры/Активности</a></li>
+            </ul>
+    </details>
+
+    <h1 align="center"><a name="broni">Бронирование отеля</a></h1>
+
+    <details>
+        <summary>Построить график по показателям</summary>
+        <form>
+            <p>По горизонтали:</p>
+                <input type="radio" name="horizontal" value="Город" id="city">Город<br>
+                <input type="radio" name="horizontal" value="Тип отеля" id="price">Тип отеля<br>
+            <p>По вертикали:</p>
+                <input type="checkbox" name="vertical" value="Рейтинг" id="Maxrau" onclick="changeState(this.form, value)">Максимальный рейтинг<br>
+                <input type="checkbox" name="vertical" value="Рейтинг" id="Minrau" onclick="changeState(this.form, value)">Минимальный рейтинг<br>
+                <input type="checkbox" name="vertical" value="Цена за ночь" id="Maxprice" onclick="changeState(this.form, value)">Максимальная цена за ночь<br>
+                <input type="checkbox" name="vertical" value="Цена за ночь" id="Minprice" onclick="changeState(this.form, value)">Минимальная цена за ночь<br>
+            <p>
+                <input type="button" value="Построить" onclick="drawGraph(this.form)">
+            </p>
+        </form>
+            <svg height="10"></svg>
+    </details>
+    <details>
+        <summary>Фильтр</summary>
+        <form id="filter">
+            <p>
+                <label>Название отеля:
+                    <input type="text" name="Honame" id="Honame">
+                </label>
+            </p>
+
+            <p>
+                <label>Город:
+                    <input type="text" name="Ciname" id="Ciname">
+                </label>
+            </p>
+
+            <p>
+                <label>Сайт:
+                    <input type="text" name="Linkname" id="Linkname">
+                </label>
+            </p>
+
+            <p>
+                <label>Рейтинг:
+                    от
+                    <input type="number" min="0" max="5.0" id="rayFrom">
+                    до
+                    <input type="number" min="0" max="5.0" id="rayTo">
+                </label>
+            </p>
+
+            <p>
+                <label>Цена за ночь:
+                    от
+                    <input type="number" min="0" id="priceFrom">
+                    до
+                    <input type="number" min="0" id="priceTo">
+                </label>
+            </p>
+
+            <p>
+                <label>Тип отеля:
+                    <input type="text" name="type" id="typeHotel">
+                </label>
+            </p>
+
+            <input type="button" value="Найти" id="search">
+            <input type="button" value="Очистить фильтры" id="clear">
+        </form>
+    </details>
+    <details>
+        <summary>Сортировать по показателям:</summary>
+        <form id="sort">
+            <label> Первый уровень:
+                <select id="sort1">
+                </select>
+                <input type="checkbox" id="sort1Desc"> По убыванию
+            </label><br>
+
+            <label> Второй уровень:
+                <select id="sort2">
+                </select>
+                <input type="checkbox" id="sort2Desc"> По убыванию
+            </label><br>
+
+            <label> Третий уровень:
+                <select id="sort3">
+                </select>
+                <input type="checkbox" id="sort3Desc"> По убыванию
+            </label><br>
+
+            <input type="button" value="Сортировать" id="Sort_btn">
+            <input type="button" value="Сбросить сортировку" id="Clear_btn">
+        
+        </form>
+    </details>
+        </form>
+        <table id="list"></table>
+    <script src="http://d3js.org/d3.v7.min.js"></script>
+    <script type = "text/javascript" src = "filter.js"></script>
+    <script type = "text/javascript" src = "data.js"></script>
+</body>
+</html>

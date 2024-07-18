@@ -1,0 +1,19 @@
+#list {
+    border: 2px solid black; 
+    margin: auto;
+}
+
+th, td {
+    padding: 5px;
+    border: 2px solid black; 
+}
+
+svg text {
+    font: 8px;
+}
+   
+svg path, line {
+    fill: none;
+    stroke: black;
+    width: 1px;
+}
